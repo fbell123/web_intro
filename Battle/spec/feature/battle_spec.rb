@@ -12,3 +12,11 @@ RSpec.feature "Battle management", :type => :feature do
     expect(page).to have_text("Tarquinn challenges Gwenevere to duel to the death")
   end
 end
+
+RSpec.feature "Battle hitpoints", :type => :feature do
+  scenario "players can see each others hp" do
+    visit "/play"
+
+    expect(page).to have_content '100HP'
+  end
+end
