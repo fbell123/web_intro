@@ -1,0 +1,43 @@
+
+
+h1 {
+  font-size: 100px;
+  color: pink;
+  text-align: center;
+}
+
+.ImageHolder {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+.team1 {
+   padding: 5px;
+   border:5px solid red;
+   width: 40%;
+}
+.team2 {
+   padding: 5px;
+   border:5px solid blue;
+  width: 40%;
+}
+
+.form {
+  width: 100%;
+  text-align: center;
+
+}
+.player1 {
+  float: left;
+  margin-left: 25%;
+}
+
+.player2 {
+  float: right;
+  margin-right: 25%;
+}
+
+.submit {
+  float: center;
+}
