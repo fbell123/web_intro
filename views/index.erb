@@ -1,6 +1,7 @@
 
 
-<h1>Hello! <%= ["Amigo", "Oscar", "Viking"].sample %></h1>
+
+<h1>Hello! <%=@name%></h1>
 <div>
  <style>
  img  {
@@ -8,5 +9,11 @@
    border-style: dashed
    }
    </style>
+   <% if @name.nil? %>
+        <form action="/named-cat">
+          <input type="text" name="name"/>
+          <input type="submit" name="Submit"/>
+        </form>
+   <% end %>
    <img src='http://bit.ly/1eze8aE'>
  </div>
