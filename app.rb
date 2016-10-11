@@ -3,33 +3,9 @@ require 'sinatra'
 
 
 get '/' do
-  "Hello World"
+  erb(:index)
 end
 
-get '/secret' do
-  "my secret is that I have a very messy room at the moment!"
+post '/setup' do
+  "Hello"
 end
-
-get '/coffee' do
-  "I like my coffee black and strong"
-end
-
-get '/run' do
-  "I should really go for a run"
-end
-
-get '/random-cat' do
-@name = ["Amigo", "Oscar", "Viking"].sample
-erb(:index)
-end
-
-post '/named-cat' do
-  p params
-@name = params[:name]
-erb(:index)
-end
-
-get '/form' do
-  erb (:form)
-end
-# <img src="smiley.gif" alt="Smiley face" border="5">
