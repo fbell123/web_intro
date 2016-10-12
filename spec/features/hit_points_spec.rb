@@ -4,6 +4,6 @@ require "app"
 feature 'initialize hit points' do
  scenario 'viewing hit points' do
    sign_in_and_play
-   expect(page).to have_content "#{$game.player1.hp} HP"
+   expect(page).to have_content "#{$game.players[0].hp} HP"
  end
 end
