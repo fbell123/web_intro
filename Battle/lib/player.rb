@@ -13,9 +13,9 @@ class Player
     @hp -= 10
   end
 
-  def reached_zero_health
+  def zero_health
     @hp == 0
-    "Romeo dun, you dead"
+    "#{:player1} dun, #{:player1} is dead"
   end
 
 end

@@ -5,6 +5,8 @@ describe Player do
 
   subject(:player1) {described_class.new("Jason")}
   subject(:player2) {described_class.new("Timmy")}
+  subject(:dead_player){described_class.new("Timmy")}
+  let(:dead_player){double :player, hp: 0}
 
   describe "#initialize" do
     it 'returns player name' do
@@ -29,7 +31,7 @@ describe Player do
 
   describe "#reached_zero_health" do
     it 'shows message saying player has lost' do
-      expect(player1.reached_zero_health).to eq "Romeo dun, you dead"
+      expect(player1.zero_health).to eq "#{:player1} dun, #{:player1} is dead"
     end
   end
 

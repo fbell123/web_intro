@@ -26,6 +26,12 @@ h1{
   margin-right: 25%
 }
 
+.turn {
+  float: center;
+  color: white;
+  margin-right: 50%;
+}
+
 
 img {
   width: 300px;
@@ -36,6 +42,7 @@ img {
 
 input[type=submit] {
     padding:5px 15px;
+    margin-top: 10%;
     background:pink;
     border:0 none;
     cursor:pointer;
