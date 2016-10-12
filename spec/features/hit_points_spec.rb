@@ -1,5 +1,5 @@
 require "spec_helper"
-require "battle"
+require "app"
 
 feature 'initialize hit points' do
  scenario 'viewing hit points' do

@@ -1,5 +1,5 @@
 require "spec_helper"
-require "battle"
+require "app"
 
 feature 'Enter names' do
  scenario 'submitting names' do

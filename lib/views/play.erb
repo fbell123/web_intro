@@ -1,18 +1,11 @@
 <div>
 <h1><%=@p1_name%>: <%=@p1_hp%> HP </h1><br>
 </div>
-<!-- <h2><%=@p1_points%></h2> -->
 
 <div>
 <h1><%=@p2_name%>: <%=@p2_hp%> HP </h1>
 </div>
-<!-- <h2><%=@p2_points%></h2> -->
 
-<!-- <div>
- <style>
- img  {
-   border-color: red;
-   border-style: dashed
-   }
-   </style>
- </div> -->
+<form method="get" action="/attack">
+  <input type="submit" value="Attack"/>
+</form>
