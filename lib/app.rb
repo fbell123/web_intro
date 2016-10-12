@@ -25,10 +25,9 @@ class Battle < Sinatra::Base
   end
 
   get '/attack' do
-    @p1_name = $p1.name
-    @p2_name = $p2.name
-    $p2.reduce_hp
-    @p2_hp = $p2.hp
+    @p1 = $p1
+    @p2 = $p2
+    @p1.attack(@p2)
     erb(:attack)
   end
 
