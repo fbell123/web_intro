@@ -23,30 +23,38 @@
   100% { background-color: green; }
 }
 body {
--webkit-animation: argh-my-eyes 1s infinite;
--moz-animation:    argh-my-eyes 1s infinite;
-animation:         argh-my-eyes 1s infinite;
+  -webkit-animation: argh-my-eyes 1s infinite;
+  -moz-animation:    argh-my-eyes 1s infinite;
+  animation:         argh-my-eyes 1s infinite;
 }
 </style>
-  <link rel="stylesheet" href="reset.css" type="text/css" />
-  <link rel="stylesheet" href="css/style2.css"/>
+<link rel="stylesheet" href="reset.css" type="text/css" />
+<link rel="stylesheet" href="css/style2.css"/>
 </head>
 
 <h1> <%= @game.player1.name %> challenges <%= @game.player2.name %> to a duel to the death <h1>
   <div class = ImageHolder>
-      <img src="https://goo.gl/bvXRKT">
-      <img src="https://media3.giphy.com/media/3D4gCkHF0wssE/200_s.gif">
+    <img src="https://goo.gl/bvXRKT">
+    <img src="https://media3.giphy.com/media/3D4gCkHF0wssE/200_s.gif">
   </div>
   <div class= stats>
     <div class= player1>
+      <% if (@game.player1.hp && @game.player2.hp) > 0 %>
       <h5> <%= @game.player1.name %> <%= @game.player1.hp %>HP </h5>
     </div>
     <div class= player2>
       <h5> <%= @game.player2.name %> <%= @game.player2.hp %>HP </h5>
-    </div></div>
+    </div>
+  </div>
 
-<form action ="/attack">
-  <input type='submit' value='ATTACK!'>
-</form>
+  <form action ="/attack">
+    <input type='submit' value='ATTACK!'>
+  </form>
 
-<h5><%= @game.turn.name %>'s turn </h5>
+  <h5><%= @game.turn.name %>'s turn </h5>
+
+    <% elsif @game.player1.hp == 0 %>
+    <h5> <%= @game.player1.name %> dun, <%= @game.player1.name %> is dead </h5>
+    <% elsif @game.player2.hp == 0 %>
+    <h5> <%= @game.player2.name %> dun, <%= @game.player2.name %> is dead</h5>
+    <% end %>

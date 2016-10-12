@@ -10,7 +10,12 @@ class Player
   end
 
   def take_damage
-      @hp -= 10
-    end
+    @hp -= 10
+  end
+
+  def reached_zero_health
+    @hp == 0
+    "Romeo dun, you dead"
+  end
 
 end
