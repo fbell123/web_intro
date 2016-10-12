@@ -1,28 +1,26 @@
 require 'sinatra/base'
-# require 'sinatra'
-# require 'lib'
+
 
 class Battle < Sinatra::Base
-  #
-  # #
-  # post '/setup' do
-  #   @p1_name = params[:player1_name]
-  #   @p2_name = params[:player2_name]
-  #   @p1_points = 100
-  #   @p2_points = 100
-  #
-  #   erb(:battle)
-  # end
+
+  enable :sessions
 
   get '/' do
-    'Hello Battle!'
+    erb(:index)
+  end
+
+  post '/names' do
+    session[:p1_name] = params[:p1_name]
+    session[:p2_name] = params[:p2_name]
+    redirect ('/play')
+  end
+
+  get '/play' do
+    @p1_name = session[:p1_name]
+    @p2_name = session[:p2_name]
+    erb(:play)
   end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
-
-#
-# get '/' do
-#   erb(:index)
-# end
