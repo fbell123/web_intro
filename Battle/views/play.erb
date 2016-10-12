@@ -32,17 +32,17 @@ animation:         argh-my-eyes 1s infinite;
   <link rel="stylesheet" href="css/style2.css"/>
 </head>
 
-<h1> <%= @player1 %> challenges <%= @player2 %> to a duel to the death <h1>
+<h1> <%= @game.player1.name %> challenges <%= @game.player2.name %> to a duel to the death <h1>
   <div class = ImageHolder>
       <img src="https://goo.gl/bvXRKT">
       <img src="https://media3.giphy.com/media/3D4gCkHF0wssE/200_s.gif">
   </div>
   <div class= stats>
     <div class= player1>
-      <h5> <%= @player1 %> 100HP</h5>
+      <h5> <%= @game.player1.name %> 100HP</h5>
     </div>
     <div class= player2>
-      <h5> <%= @player2 %> 100HP <h5>
+      <h5> <%= @game.player2.name %> 100HP <h5>
     </div></div>
 
 <form action ="/attack">

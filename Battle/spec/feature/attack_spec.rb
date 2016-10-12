@@ -1,4 +1,6 @@
 require 'spec_helper'
+require './lib/game'
+require './lib/player'
 
 feature 'Attack' do
 
@@ -7,4 +9,6 @@ feature 'Attack' do
     click_button('ATTACK!')
     expect(page.text).to include('Gwenevere has 90HP')
     end
+
+
 end

@@ -16,12 +16,6 @@ describe Player do
     expect(player1.hp).to eq Player::DEFAULT_HP
   end
 
-  describe "#attack(player)" do
-    it 'attacks a player' do
-      expect(player1).to receive(:take_damage)
-      player2.attack(player1)
-    end
-  end
 
   describe "#take_damage" do
     it 'reduces a players health by 10HP' do
