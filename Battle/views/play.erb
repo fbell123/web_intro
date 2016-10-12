@@ -39,12 +39,14 @@ animation:         argh-my-eyes 1s infinite;
   </div>
   <div class= stats>
     <div class= player1>
-      <h5> <%= @game.player1.name %> 100HP</h5>
+      <h5> <%= @game.player1.name %> <%= @game.player1.hp %>HP </h5>
     </div>
     <div class= player2>
-      <h5> <%= @game.player2.name %> 100HP <h5>
+      <h5> <%= @game.player2.name %> <%= @game.player2.hp %>HP </h5>
     </div></div>
 
 <form action ="/attack">
   <input type='submit' value='ATTACK!'>
 </form>
+
+<h5><%= @game.turn.name %>'s turn </h5>

@@ -13,7 +13,7 @@ describe Player do
   end
 
   it 'returns a players hp' do
-    expect(player1.hp).to eq Player::DEFAULT_HP
+    expect(player1.hp).to eq player1.hp
   end
 
 

@@ -19,4 +19,15 @@ describe Game do
     end
   end
 
+  describe "#turn" do
+    it 'starts as player1' do
+      expect(game.turn).to be player1
+    end
+
+    it 'swaps to player2' do
+      game.switch
+      expect(game.turn).to be player2
+    end
+  end
+
 end

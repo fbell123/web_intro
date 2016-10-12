@@ -1,2 +1,9 @@
-<h3> <%= @game.player1.name %> stabs <%= @game.player2.name %>. ouch.</h3>
-<h4> <%= @game.player2.name %> has <%= @game.player2.hp %>HP </h4>
+<h3> <%= @game.switch.name %> stabs <%= @game.switch.name %>. ouch.</h3>
+<h4> <%= @game.turn.name %> has <%= @game.turn.hp %>HP </h4>
+
+<h5><%= @game.turn.name %>'s turn </h5>
+
+
+<form action ="/play">
+  <input type='submit' value='Next attack'>
+</form>
