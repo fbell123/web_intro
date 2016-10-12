@@ -13,10 +13,6 @@ describe Player do
       expect(player1.hp).to eq Player::STARTING_HP
     end
 
-    it "HP can be reduced by reduce_hp method" do
-      player1.attack(player2)
-      expect(player2.hp).to eq Player::STARTING_HP-Player::DAMAGE
-    end
   end
 
 end
