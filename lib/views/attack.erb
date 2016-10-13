@@ -1,10 +1,10 @@
 <!-- These appear reversed because the attack method changes the turn array -->
-<% if Game.game.players[Game.game.turn[0]].hp <= 0 %>
-  <%=Game.game.players[Game.game.turn[1]].name%> has attacked <%=Game.game.players[Game.game.turn[0]].name%><br>
-  <%=Game.game.players[0].name%> has lost the battle!
+<% if @game.active_player.hp <= 0 %>
+  <%=@game.idle_player.name%> has attacked <%=@game.active_player.name%><br>
+  <%=@game.active_player.name%> has lost the battle!
 <% else %>
-  <%=Game.game.players[Game.game.turn[1]].name%> has attacked <%=Game.game.players[Game.game.turn[0]].name%><br>
-  <%=Game.game.players[Game.game.turn[0]].name%> has <%=Game.game.players[Game.game.turn[0]].hp%>hp<br>
+  <%=@game.idle_player.name%> has attacked <%=@game.active_player.name%><br>
+  <%=@game.active_player.name%> has <%=@game.active_player.hp%>hp<br>
   <form action="/switch_turns" method="get">
     <input  type="submit" value="Ok"/>
   </form>

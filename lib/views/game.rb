@@ -23,6 +23,20 @@ attr_reader :turn, :players
     @turn.rotate!
   end
 
+  def active_player
+    Game.game.players[Game.game.turn[0]]
+  end
 
+  def idle_player
+    Game.game.players[Game.game.turn[1]]
+  end
+
+  def player1
+    players[0]
+  end
+
+  def player2
+    players[1]
+  end
 
 end

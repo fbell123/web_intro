@@ -1,9 +1,9 @@
 <div>
-<h1><%=Game.game.players[0].name%>: <%=Game.game.players[0].hp%> HP </h1><br>
+<h1><%=@game.player1.name%>: <%=@game.player1.hp%> HP </h1><br>
 </div>
 
 <div>
-<h1><%=Game.game.players[1].name%>: <%=Game.game.players[1].hp%> HP </h1>
+<h1><%=@game.player2.name%>: <%=@game.player2.hp%> HP </h1>
 </div>
 
 <form method="get" action="/attack">

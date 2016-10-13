@@ -16,11 +16,13 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
+    @game = Game.game
     erb(:play)
   end
 
   get '/attack' do
-    Game.game.attack(Game.game.players[Game.game.turn[1]])
+    @game = Game.game
+    @game.attack(@game.idle_player)
     erb(:attack)
   end
 
