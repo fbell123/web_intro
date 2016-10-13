@@ -8,6 +8,7 @@ describe Player do
   subject(:dead_player){described_class.new("Timmy")}
   let(:dead_player){double :player, hp: 0}
 
+
   describe "#initialize" do
     it 'returns player name' do
       expect(player1.name).to eq "Jason"

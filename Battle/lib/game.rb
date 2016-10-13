@@ -2,6 +2,18 @@ class Game
 
   attr_reader :players, :turn
 
+  # not sure about the below method and how it works
+  # needs more research
+
+  def self.begin(player1, player2)
+    @game = Game.new(player1, player2)
+  end
+
+  def self.call
+    @game
+  end
+
+
   def initialize(player1, player2)
     @players = [player1, player2]
     @turn = player1

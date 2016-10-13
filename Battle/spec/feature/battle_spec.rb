@@ -2,6 +2,7 @@ require 'spec_helper'
 require '././cool_app.rb'
 #require '././index.erb'
 
+
 RSpec.feature "User input", :type => :feature do
   scenario "user fills in form with name" do
   sign_in_and_play

@@ -4,6 +4,7 @@ describe Game do
   let(:player1){double :player}
   let(:player2){double :player}
 
+
   describe "#initialize" do
     it 'accepts two player instances' do
       expect(game.player1).to eq player1
@@ -13,7 +14,6 @@ describe Game do
 
   describe "#attack(player)" do
     it 'attacks a player' do
-      sign_in_and_play
       expect(player1).to receive(:take_damage)
       game.attack(player1)
     end
