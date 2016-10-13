@@ -1,0 +1,21 @@
+
+body {
+  background-image: url(https://images5.alphacoders.com/445/445906.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.ImageHolder {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 20px
+}
+
+.team1 {
+   width: 45%;
+}
+
+.team2 {
+  width: 45%;
+}

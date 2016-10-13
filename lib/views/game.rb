@@ -8,6 +8,7 @@ class Game
     @game = Game.new(player1, player2)
   end
 
+
 attr_reader :turn, :players
   def initialize(player1, player2)
     @players = [Player.new(player1), Player.new(player2)]
